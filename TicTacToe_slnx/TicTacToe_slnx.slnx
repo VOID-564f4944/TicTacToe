@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="TicTacToe_proj/TicTacToe_proj.vcxproj" Id="b130a83d-17db-411e-9ce4-e8cf7de440fc" />
+</Solution>
