@@ -7,6 +7,7 @@ A terminal-based two-player Tic-Tac-Toe game written in C++.
 - Two-player local multiplayer
 - Input validation and error handling
 - Cross-platform terminal support (Windows & Linux)
+- Option to quit (since v1.1.0)
 
 ## How to Play
 
