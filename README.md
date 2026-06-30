@@ -1,23 +1,37 @@
 # Tic-Tac-Toe
 
-A terminal-based two-player Tic-Tac-Toe game written in C++.
+A terminal-based Tic-Tac-Toe game written in **C++** featuring both local multiplayer and AI opponents with multiple difficulty levels.
 
 ## Features
 
-- Two-player local multiplayer
-- Input validation and error handling
-- Cross-platform terminal support (Windows & Linux)
-- Option to quit (since v1.1.0)
+* 🎮 **Player vs Player (PvP)**
+* 🤖 **Player vs AI (PvA)**
+* 🧠 Three AI difficulty levels:
+
+  * Easy
+  * Medium
+  * Impossible *(Minimax with Alpha-Beta Pruning)*
+* ✅ Robust input validation and error handling
+* 🚪 Quit an ongoing game at any time
+* 🖥️ Cross-platform terminal support (Windows & Linux)
+* 📁 Modular project structure
 
 ## How to Play
 
-- Players take turns as `x` and `o`
-- Enter a number (1-9) corresponding to the board position
-- First to get 3 in a row wins, otherwise it's a draw
+1. Select a game mode:
 
-Board positions:
+   * Player vs Player
+   * Player vs AI
+2. If playing against the AI:
 
-```
+   * Choose a difficulty level.
+   * Select your character (`x` or `o`). **`x` always plays first.**
+3. Enter a number (`1`-`9`) corresponding to the desired board position.
+4. The first player to align three marks horizontally, vertically, or diagonally wins. If all cells are occupied without a winner, the game ends in a draw.
+
+### Board Layout
+
+```text
  1 | 2 | 3
 ---+---+---
  4 | 5 | 6
@@ -27,18 +41,62 @@ Board positions:
 
 ## Building
 
-**Visual Studio:**
-1. Open the `.slnx` file in Visual Studio
-2. Press `Ctrl+F5` to build and run
+### Visual Studio
 
-**Linux/macOS:**
+1. Open the `.slnx` file.
+2. Build and run using **Ctrl + F5**.
+
+### Linux / macOS (g++)
+
+> If all source files are in the project root:
+
 ```bash
-g++ main.cpp -o tictactoe
+g++ *.cpp -o tictactoe
 ./tictactoe
 ```
 
-**Windows (g++):**
+> If your project uses a `src/` directory:
+
 ```bash
-g++ main.cpp -o tictactoe.exe
+g++ src/*.cpp -o tictactoe
+./tictactoe
+```
+
+### Windows (g++)
+
+> If all source files are in the project root:
+
+```bash
+g++ *.cpp -o tictactoe.exe
 tictactoe.exe
 ```
+
+> If your project uses a `src/` directory:
+
+```bash
+g++ src/*.cpp -o tictactoe.exe
+tictactoe.exe
+```
+
+## Version
+
+**Current Version:** `v1.2.0`
+
+### Changelog
+
+#### v1.2.0
+
+* Added **Player vs AI (PvA)** mode.
+* Added **Easy**, **Medium**, and **Impossible** AI difficulties.
+* Implemented **Minimax with Alpha-Beta Pruning** for the Impossible AI.
+* Refactored the project into multiple source and header files.
+* Improved code organization and maintainability.
+
+#### v1.1.0
+
+* Added the option to quit an ongoing game.
+* Improved input validation and error handling.
+
+#### v1.0.0
+
+* Initial release with local two-player gameplay.
